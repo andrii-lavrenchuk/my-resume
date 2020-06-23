@@ -1,0 +1,41 @@
+$title-bg-color: rgba(47, 48, 58, 0.8);
+$item-width: calc((100% - 60px) / 3);
+
+.work-list{
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    .item {
+        width: $item-width;
+        margin-right: 30px;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+.our-work-thumb {
+    position: relative;
+
+    .title {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        color: $third-color;
+        background-color: $title-bg-color;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 27px 80px;
+        height: 70px;
+        width: 100%;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

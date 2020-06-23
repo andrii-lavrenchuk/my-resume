@@ -1,0 +1,217 @@
+$backdrop-bg-color: rgba(0, 0, 0, 0.2);
+$modal-bg-color: #fff;
+$modal-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+$modal-transform: translate(-50%, -50%) scale(1);
+$close-btn-bg-color: #fff;
+$close-btn-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+$btn-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backdrop-bg-color;
+
+  opacity: 1;
+  transition: opacity $transition;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 530px;
+  min-height: 580px;
+  padding: 40px;
+
+  background-color: $modal-bg-color;
+  box-shadow: $modal-box-shadow;
+  border-radius: 4px;
+
+  transform: $modal-transform;
+
+  transition: transform $transition;
+}
+.form-title {
+  font-size: 20px;
+
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-field {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  color: $secondary-text-color;
+
+  .form-lable {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+
+    transition: transform $transition;
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 19px;
+
+    width: 18px;
+    height: 18px;
+
+    transform: translateY(-50%);
+
+    transition: fill $transition;
+  }
+  & + .form-field {
+    margin-top: 28px;
+  }
+  .comment {
+    width: 100%;
+    height: 120px;
+    resize: none;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+  .comment-lable {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+  }
+  &:focus-within .form-lable {
+    color: $accent-color;
+    transform: translateY(-40px) translateX(-19px);
+  }
+}
+.form-input {
+  color: $secondary-text-color;
+
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  &:not(:placeholder-shown) + .form-lable {
+    transform: translateY(-40px) translateX(-19px);
+  }
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  transition: fill $transition;
+  .form-field:focus-within & {
+    fill: $accent-color;
+  }
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  margin-top: 30px;
+
+  .button {
+    display: inline-block;
+    color: $third-color;
+    background-color: $accent-color;
+
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+    box-shadow: $btn-box-shadow;
+    border: none;
+    cursor: pointer;
+
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+  }
+}
+.close-button {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  padding: 0;
+  margin: 0;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  border: transparent;
+  cursor: pointer;
+
+  background: $close-btn-bg-color;
+  box-shadow: $close-btn-box-shadow;
+  &:hover {
+    fill: $accent-color;
+
+    transition: fill $transition;
+  }
+}
+.close-icon {
+  width: 11px;
+  height: 11px;
+}
+.policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $secondary-text-color;
+
+  margin-top: 20px;
+  .conditions {
+    color: $accent-color;
+  }
+}
+.checkbox-icon {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 8px;
+
+  border: 2px solid $primary-text-color;
+  border-radius: 2px;
+
+  transition: background-color $transition, border-color $transition;
+
+  .checkbox:checked + & {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+}

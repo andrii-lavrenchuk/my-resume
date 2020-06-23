@@ -1,0 +1,48 @@
+$padding-section: 94px;
+$container-width: 1200px;
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .visualy-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .page-body {
+    background-color: $third-color;
+    color: $primary-text-color;
+  
+    font-family: $main-font;
+    letter-spacing: 0.03em;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: $container-width;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  
+
+  }
+  .section {
+    padding-top: $padding-section;
+    padding-bottom: $padding-section;
+  }
+  .section-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }

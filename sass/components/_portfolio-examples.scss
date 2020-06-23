@@ -1,0 +1,113 @@
+$item-width: calc((100% - 60px) / 3);
+$link-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+  0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+$card-bg-color: rgba(33, 150, 243, 0.9);
+$card-border-color: #eeeeee;
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+.examples .item {
+  width: $item-width;
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.examples-link {
+  text-decoration: none;
+  display: block;
+  outline: none;
+  transition: box-shadow $transition;
+
+  &:focus,
+  &:hover {
+    box-shadow: $link-box-shadow;
+  }
+}
+.product-thumb {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $card-bg-color;
+
+    transform: translateY(100%);
+
+    opacity: 0;
+    transition: transform $transition, opacity $transition;
+  }
+  .examples-link:focus &::before,
+  .examples-link:hover &::before {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 63px 24px;
+  height: 100%;
+  width: 100%;
+  color: $third-color;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform $transition, opacity $transition;
+  .examples-link:focus &,
+  .examples-link:hover & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.card-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid $card-border-color;
+
+  box-sizing: border-box;
+
+  background: $third-color;
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: $primary-text-color;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  .type {
+    margin-top: 4px;
+    margin-bottom: 0;
+
+    color: $secondary-text-color;
+
+    font-size: 16px;
+    line-height: 1.87;
+  }
+}
