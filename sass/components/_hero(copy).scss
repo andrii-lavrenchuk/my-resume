@@ -1,7 +1,6 @@
 $hero-bg-color: #000000;
 
 $button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -48,8 +47,5 @@ $button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-  }
-  @media screen and (max-width: 479px) {
-    width: 480px;
   }
 }

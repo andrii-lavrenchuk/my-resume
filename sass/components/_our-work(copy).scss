@@ -1,17 +1,11 @@
 $title-bg-color: rgba(47, 48, 58, 0.8);
 $item-width: calc((100% - 60px) / 3);
 
-.our-work {
-  @media screen and (max-width: 1199px) {
-    display: none;
-  }
-}
 .work-list {
   margin-top: 50px;
 
   display: flex;
   justify-content: center;
-
   .item {
     width: $item-width;
     margin-right: 30px;

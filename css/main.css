@@ -438,6 +438,12 @@ img {
   letter-spacing: 0.06em;
 }
 
+@media screen and (max-width: 479px) {
+  .hero {
+    width: 480px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .feature-list {
     display: -webkit-box;
@@ -522,6 +528,12 @@ img {
   margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
+}
+
+@media screen and (max-width: 1199px) {
+  .our-work {
+    display: none;
+  }
 }
 
 .work-list {
