@@ -1,0 +1,29 @@
+$item-width: calc((100% - 150px) / 6);
+
+.customers-list {
+  display: flex;
+  margin-top: 50px;
+
+  .item {
+    width: $item-width;
+    margin-right: 30px;
+  }
+}
+.customer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid $svg-color;
+  border-radius: 4px;
+  fill: $svg-color;
+
+  transition: fill $transition, border-color $transition;
+
+  &:focus,
+  &:hover {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+}

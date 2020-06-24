@@ -1,41 +1,61 @@
 $calc: calc((100% - 90px) / 4);
 
-
 .feature-list {
+  @media screen and (min-width: $tablet) {
     display: flex;
-    .item {
-        width: $calc;
-        margin-right: 30px;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .item {
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 60px) / 2);
+      margin: 15px;
     }
+    @media screen and (min-width: $desktop) {
+      flex-basis: $calc;
+    }
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 .features-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    border-radius: 4px;
-    background-color: $secondary-background-color;
-    >.svg-icon {
-        width: 65px;
-        height: 70px;
-    }
-    +.title {
-        color: $primary-text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  border-radius: 4px;
+  background-color: $secondary-background-color;
+  > .svg-icon {
+    width: 65px;
+    height: 70px;
+  }
+  + .title {
+    color: $primary-text-color;
 
-        margin-top: 30px;
-        margin-bottom: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
 
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      text-align: center;
     }
-    ~.features-text {
-        color: $secondary-text-color;
+  }
+}
+.features-text {
+  color: $secondary-text-color;
 
-        margin-top: 10px;
-        margin-bottom: 0;
-        font-size: 14px;
-        line-height: 1.71;
-    }
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71;
 }
