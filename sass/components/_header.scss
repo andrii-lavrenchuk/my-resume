@@ -1,9 +1,10 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   .main-nav {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
   }
 }
 .logo {
@@ -22,13 +23,13 @@
   }
 }
 .site-nav {
-  display: flex;
+  // display: flex;
   .item + .item {
-    margin-left: 50px;
+    // margin-left: 50px;
   }
   .link {
     position: relative;
-    display: block;
+    display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -61,18 +62,42 @@
   }
 }
 
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  .icon-cross {
+    display: none;
+  }
+  &.is-open .icon-cross {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+}
+.header-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
 .address-nav {
   margin-left: auto;
 }
 .address-list {
-  display: flex;
+  // display: flex;
   .item + .item {
-    display: block;
-    margin-left: 50px;
+    // display: block;
+    // margin-left: 50px;
   }
   .link {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     color: $secondary-text-color;
 

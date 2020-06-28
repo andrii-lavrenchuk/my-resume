@@ -19,47 +19,60 @@
     <!--Header-->
     <!-- <header>
       <div class="container header">
-        <nav class="main-nav">
-          <a href="./index.html" class="logo"
-            >Web <span class="logo-word">Studio</span>
-          </a>
-          <ul class="site-nav list">
-            <li class="item"><a href="" class="link current">Студия</a></li>
-            <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
-            </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
-        <address class="address-nav">
-          <ul class="address-list list">
-            <li class="item">
-              <a
-                href="mailto:info@devstudio.com"
-                aria-label="email"
-                class="link"
-              >
-                <svg class="email-icon">
-                  <use href="./images/sprite.svg#icon-email"></use>
-                </svg>
+        <a href="./index.html" class="logo"
+          >Web <span class="logo-word">Studio</span>
+        </a>
+        <button
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного">
+            <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+            <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="header-menu">
+          <nav class="main-nav">
+            <ul class="site-nav list">
+              <li class="item"><a href="" class="link current">Студия</a></li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item"><a href="" class="link">Контакты</a></li>
+            </ul>
+          </nav>
+          <address class="address-nav">
+            <ul class="address-list list">
+              <li class="item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  aria-label="email"
+                  class="link"
+                >
+                  <svg class="email-icon">
+                    <use href="./images/sprite.svg#icon-email"></use>
+                  </svg>
 
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="item">
-              <a
-                href="tel:+380961111111"
-                aria-label="phone-number"
-                class="link"
-              >
-                <svg class="phone-icon">
-                  <use href="./images/sprite.svg#icon-phone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item">
+                <a
+                  href="tel:+380961111111"
+                  aria-label="phone-number"
+                  class="link"
+                >
+                  <svg class="phone-icon">
+                    <use href="./images/sprite.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header> -->
     <main>
@@ -444,8 +457,9 @@
       </section>
     </main>
     <!-- Footer -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-flex">
+        <!-- <div class="flex"> -->
         <div class="nav-flex">
           <nav>
             <a href="./index.html" class="logo-footer"
@@ -512,6 +526,7 @@
             </li>
           </ul>
         </div>
+        <!-- </div> -->
         <div class="subscribe">
           <form>
             <label for="email" class="call">Подпишитесь на рассылку </label>
@@ -531,7 +546,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -614,5 +629,6 @@
       })();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

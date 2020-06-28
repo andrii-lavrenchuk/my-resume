@@ -2,7 +2,7 @@ $container-width: 1200px;
 
 img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 .visualy-hidden {
@@ -52,6 +52,7 @@ img {
     padding-bottom: 94px;
   }
 }
+
 .section-title {
   text-align: center;
   margin-top: 0;
