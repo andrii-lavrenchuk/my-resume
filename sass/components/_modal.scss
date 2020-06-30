@@ -12,33 +12,38 @@ $btn-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   position: fixed;
   top: 0;
   left: 0;
+  padding: 93px 15px;
   width: 100%;
   height: 100%;
   background-color: $backdrop-bg-color;
 
   opacity: 1;
   transition: opacity $transition;
+  overflow-y: scroll;
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
 
-  min-width: 530px;
-  min-height: 580px;
   padding: 40px;
 
   background-color: $modal-bg-color;
   box-shadow: $modal-box-shadow;
   border-radius: 4px;
 
-  transform: $modal-transform;
-
   transition: transform $transition;
+  @media screen and (min-width: $tablet) {
+    top: 50%;
+    left: 50%;
+
+    max-width: 450px;
+    width: 100%;
+    // max-height: 610px;
+    transform: $modal-transform;
+  }
 }
 .form-title {
   font-size: 20px;
@@ -195,11 +200,15 @@ $btn-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   .conditions {
     color: $accent-color;
   }
+  @media screen and(max-width: 1199px) {
+    line-height: 1.16;
+    font-size: 12px;
+  }
 }
 .checkbox-icon {
   display: inline-block;
-  height: 15px;
-  width: 15px;
+  min-height: 15px;
+  min-width: 15px;
   margin-right: 8px;
 
   border: 2px solid $primary-text-color;
