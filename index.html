@@ -143,6 +143,7 @@
           </ul>
         </div>
       </section>
+
       <!--"Чем мы занимаемся" section-->
       <section class="section our-work">
         <div class="container">
@@ -150,13 +151,22 @@
           <ul class="work-list list">
             <li class="item">
               <div class="our-work-thumb">
-                <img src="./images/comp.jpg" alt="ноутбук" width="370" />
+                <img
+                  srcset="./images/comp.jpg 1x, ./images/comp@2x.jpg 2x"
+                  src="./images/comp.jpg"
+                  alt="ноутбук"
+                  width="370"
+                />
                 <h3 class="title">Десктопные приложения</h3>
               </div>
             </li>
             <li class="item">
               <div class="our-work-thumb">
                 <img
+                  srcset="
+                    ./images/mobile-phone.jpg    1x,
+                    ./images/mobile-phone@2x.jpg 2x
+                  "
                   src="./images/mobile-phone.jpg"
                   alt="телефон"
                   width="370"
@@ -167,6 +177,10 @@
             <li class="item">
               <div class="our-work-thumb">
                 <img
+                  srcset="
+                    ./images/desktop-monitor.jpg    1x,
+                    ./images/desktop-monitor@2x.jpg 2x
+                  "
                   src="./images/desktop-monitor.jpg"
                   alt="монитор"
                   width="370"
@@ -183,11 +197,17 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="item">
-              <img
-                src="./images/our-team/john-smith.jpg"
-                alt="John Smith"
-                width="270"
-              />
+              <div class="team-photo-thumb">
+                <img
+                  srcset="
+                    ./images/our-team/john-smith.jpg    1x,
+                    ./images/our-team/john-smith@2x.jpg 2x
+                  "
+                  src="./images/our-team/john-smith.jpg"
+                  alt="John Smith"
+                  width="270"
+                />
+              </div>
 
               <h3 class="teammate">Николай Кучеренко</h3>
               <p class="major">Product Designer</p>
@@ -239,11 +259,17 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./images/our-team/marta-stewart.jpg"
-                alt="Marta Stewart"
-                width="270"
-              />
+              <div class="team-photo-thumb">
+                <img
+                  srcset="
+                    ./images/our-team/marta-stewart.jpg    1x,
+                    ./images/our-team/marta-stewart@2x.jpg 2x
+                  "
+                  src="./images/our-team/marta-stewart.jpg"
+                  alt="Marta Stewart"
+                  width="270"
+                />
+              </div>
               <h3 class="teammate">Ольга Иванова</h3>
               <p class="major">Frontend Developer</p>
               <ul class="list social-links">
@@ -294,11 +320,17 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./images/our-team/robert-jakis.jpg"
-                alt="Robert Jakis"
-                width="270"
-              />
+              <div class="team-photo-thumb">
+                <img
+                  srcset="
+                    ./images/our-team/robert-jakis.jpg    1x,
+                    ./images/our-team/robert-jakis@2x.jpg 2x
+                  "
+                  src="./images/our-team/robert-jakis.jpg"
+                  alt="Robert Jakis"
+                  width="270"
+                />
+              </div>
               <h3 class="teammate">Андрей Шевченко</h3>
               <p class="major">Marketing</p>
               <ul class="list social-links">
@@ -349,11 +381,17 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./images/our-team/martin-doe.jpg"
-                alt="Martin Doe"
-                width="270"
-              />
+              <div class="team-photo-thumb">
+                <img
+                  srcset="
+                    ./images/our-team/martin-doe.jpg    1x,
+                    ./images/our-team/martin-doe@2x.jpg 2x
+                  "
+                  src="./images/our-team/martin-doe.jpg"
+                  alt="Martin Doe"
+                  width="270"
+                />
+              </div>
               <h3 class="teammate">Иван Николаев</h3>
               <p class="major">UI Designer</p>
               <ul class="list social-links">
@@ -457,6 +495,7 @@
           </ul>
         </div>
       </section>
+      -->
     </main>
     <!-- Footer -->
     <footer class="footer">

@@ -1,15 +1,9 @@
 $item-width: calc((100% - 150px) / 6);
 
 .customers-list {
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
   }
