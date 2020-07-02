@@ -3,32 +3,91 @@ $hero-bg-color: #000000;
 $button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 .hero {
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    ),
-    url(../images/hero-img.jpg);
-  background-size: cover;
+
   background-repeat: no-repeat;
   background-position: center;
   background-color: $hero-bg-color;
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+    height: 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/hero-mobile.jpg);
+    background-size: 480px 400px;
+  }
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi and (max-width: 767px)),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/hero-mobile@2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    height: 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/hero-tablet.jpg);
+    background-size: 768px 400px;
+  }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: $tablet),
+    screen and (min-resolution: 192dpi) and (min-width: $tablet),
+    screen and (min-resolution: 2dppx) and (min-width: $tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/hero-tablet@2x.jpg);
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/hero-desktopjpg);
+    background-size: 1600px 600px;
+  }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: $desktop),
+    screen and (min-resolution: 192dpi) and (min-width: $desktop),
+    screen and (min-resolution: 2dppx) and (min-width: $desktop) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/hero-desktop@2x.jpg);
+  }
+
   > .hero-title {
     margin-top: 0;
-    margin-bottom: 46px;
-    padding-top: 200px;
+    margin-bottom: 30px;
+    padding-top: 118px;
 
     color: $third-color;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+
+    font-size: 26px;
+    line-height: 1.61;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    @media screen and (min-width: $desktop) {
+      padding-top: 200px;
+
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
   .button {
     display: inline-block;
