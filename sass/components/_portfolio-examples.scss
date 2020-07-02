@@ -28,9 +28,12 @@ $card-border-color: #eeeeee;
 
 .examples-link {
   text-decoration: none;
-  display: block;
+
   outline: none;
   transition: box-shadow $transition;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &:focus,
   &:hover {
@@ -40,6 +43,7 @@ $card-border-color: #eeeeee;
 .product-thumb {
   position: relative;
   overflow: hidden;
+
   &::before {
     content: '';
     display: inline-block;
@@ -91,10 +95,10 @@ $card-border-color: #eeeeee;
   padding-top: 20px;
   padding-bottom: 20px;
   border: 1px solid $card-border-color;
+  flex-grow: 1;
 
   box-sizing: border-box;
 
-  background: $third-color;
   .title {
     margin-top: 0;
     margin-bottom: 0;
