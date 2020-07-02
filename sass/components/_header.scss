@@ -96,6 +96,10 @@
   @media screen and (min-width: $tablet) {
     display: none;
   }
+  &:focus {
+    fill: $accent-color;
+    transform: $transition;
+  }
 }
 .header-menu {
   background-color: white;
